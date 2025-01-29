@@ -5,13 +5,9 @@
 #include <nlohmann/json.hpp>
 using json = nlohmann::json; 
 using namespace std;
-
-// Function to convert a number from a given base to decimal
 long long baseToDecimal(const string &value, int base) {
     return stoll(value, nullptr, base);
 }
-
-// Function to perform Lagrange interpolation to find constant term (c)
 double lagrangeInterpolation(vector<pair<int, long long>> points) {
     int k = points.size();
     double constant = 0;
